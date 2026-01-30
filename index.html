@@ -2413,6 +2413,7 @@
 
         /* Collapsible toolbar for persistence features */
         .toolbar {
+            display: none;
             position: fixed;
             bottom: 20px;
             left: 20px;
@@ -2603,6 +2604,190 @@
             font-weight: 600;
             text-align: right;
             line-height: 1.3;
+        }
+
+        /* ========================================
+           RECAP & CTA SLIDE STYLES
+           ======================================== */
+        .slide-recap {
+            background: radial-gradient(ellipse at center top, #0f4c3a 0%, #0a3d2f 50%, #072820 100%);
+            display: flex;
+            flex-direction: column;
+            padding: 35px 45px 0;
+        }
+
+        .recap-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .recap-eyebrow {
+            color: #d4af37;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .recap-title {
+            font-size: 42px;
+            color: #fff;
+            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .recap-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .recap-card {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 14px;
+            padding: 22px 20px 18px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .recap-card-header {
+            text-align: center;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .recap-path-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0f4c3a;
+            margin-bottom: 4px;
+        }
+
+        .recap-path-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f4c3a;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 4px;
+        }
+
+        .recap-price {
+            font-size: 14px;
+            font-weight: 600;
+            color: #d4af37;
+        }
+
+        .recap-includes {
+            font-size: 10px;
+            color: #777;
+            font-style: italic;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .recap-deliverables {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .recap-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        .recap-check {
+            width: 18px;
+            height: 18px;
+            background: linear-gradient(135deg, #0f4c3a, #1a7a5e);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 10px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .recap-best-for {
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            padding-top: 10px;
+            margin-top: auto;
+        }
+
+        .recap-best-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: #0f4c3a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .recap-best-text {
+            font-size: 11px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .recap-cta-banner {
+            background: linear-gradient(90deg, #0a3d2f, #0f4c3a);
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin: 0 -45px;
+        }
+
+        .recap-cta-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .recap-goto-text {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 800;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .recap-goto-url {
+            background: #ffd700;
+            color: #1a1a1a;
+            font-size: 26px;
+            font-weight: 800;
+            font-family: 'Inter', sans-serif;
+            padding: 10px 22px;
+            letter-spacing: 1px;
+        }
+
+        .recap-divider {
+            width: 2px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .recap-email {
+            color: #ffd700;
+            font-size: 18px;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -3543,6 +3728,144 @@
         </div>
     </div>
 
+    <!-- SLIDE 18: RECAP & CTA -->
+    <div class="slide slide-recap">
+        <div class="recap-header">
+            <div class="recap-eyebrow">CHOOSE YOUR PATH</div>
+            <h1 class="recap-title">Your Journey Starts Here</h1>
+        </div>
+
+        <div class="recap-columns">
+            <!-- PATH A -->
+            <div class="recap-card">
+                <div class="recap-card-header">
+                    <div class="recap-path-label">PATH A</div>
+                    <div class="recap-path-name">"Optimize"</div>
+                    <div class="recap-price">$2.5K – $5K</div>
+                </div>
+                <div class="recap-deliverables">
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>100+ Video Lessons (Lifetime Access)</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>1-on-1 Wealth Guide</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Wealth Circle Community (12 months)</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Personal AI Wealth Advisor</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Weekly Coaching + Replays</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>SOPs, Templates & Checklists</span>
+                    </div>
+                </div>
+                <div class="recap-best-for">
+                    <div class="recap-best-label">Best For:</div>
+                    <div class="recap-best-text">Learning the fundamentals & self-execution</div>
+                </div>
+            </div>
+
+            <!-- PATH B -->
+            <div class="recap-card">
+                <div class="recap-card-header">
+                    <div class="recap-path-label">PATH B</div>
+                    <div class="recap-path-name">"Cash Flow"</div>
+                    <div class="recap-price">$10K – $25K</div>
+                </div>
+                <div class="recap-includes">Everything in Path A, PLUS:</div>
+                <div class="recap-deliverables">
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Dedicated 1-on-1 STR Coach</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>AirDNA Software ($14,400 value)</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Done-For-You Listing Setup</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Automation Systems</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Market Matrix (500+ markets)</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Property Profitability Analysis</span>
+                    </div>
+                </div>
+                <div class="recap-best-for">
+                    <div class="recap-best-label">Best For:</div>
+                    <div class="recap-best-text">Generating $2K+/month without owning property</div>
+                </div>
+            </div>
+
+            <!-- PATH C -->
+            <div class="recap-card">
+                <div class="recap-card-header">
+                    <div class="recap-path-label">PATH C</div>
+                    <div class="recap-path-name">"Full Ownership"</div>
+                    <div class="recap-price">$120K+</div>
+                </div>
+                <div class="recap-includes">Everything in A & B, PLUS:</div>
+                <div class="recap-deliverables">
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>5-10 Deals Sourced & Underwritten</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Tax + Entity Structure Setup</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Done-For-You Full Operations</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Cost Segregation Coordination</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>Vetted Partner Network Access</span>
+                    </div>
+                    <div class="recap-item">
+                        <span class="recap-check">✓</span>
+                        <span>30-Day + 90-Day Support Reviews</span>
+                    </div>
+                </div>
+                <div class="recap-best-for">
+                    <div class="recap-best-label">Best For:</div>
+                    <div class="recap-best-text">Maximum tax savings, equity building & cash flow</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recap-cta-banner">
+            <div class="recap-cta-left">
+                <span class="recap-goto-text">GO TO</span>
+                <span class="recap-goto-url">MANAGEMONEY101.COM</span>
+            </div>
+            <div class="recap-divider"></div>
+            <span class="recap-email">preston@legacyinvestingshow.com</span>
+        </div>
+    </div>
+
     <div id="save-indicator" class="save-indicator">Saved</div>
 
     <div class="toolbar" id="toolbar">
@@ -3961,6 +4284,21 @@
 [CLICK] These are our five core tax strategies: STR Loophole, Cost Segregations plus Bonus Depreciation, the Mega Backdoor Roth, the Augusta Rule, and the Home Office Deduction.
 
 [CLICK] Each one of these strategies can save you thousands. Together? They're a game-changer.`
+                },
+                // Slide 18: RECAP & CTA
+                {
+                    slideTitle: "Slide 18: RECAP & CTA",
+                    script: `Alright, let's bring it all together. This is your decision slide.
+
+[CLICK] You've got three paths in front of you. Pick the one that fits where you are right now.
+
+[CLICK] Path A is "Optimize"—$2.5K to $5K. This is for learning the fundamentals and executing on your own. You get 100+ video lessons, a 1-on-1 Wealth Guide, our community, the AI advisor, weekly coaching, and all our templates.
+
+[CLICK] Path B is "Cash Flow"—$10K to $25K. Everything in A, plus a dedicated STR coach, AirDNA software, done-for-you listing setup, automation systems, and our Market Matrix. This is for generating $2K+ per month without owning property.
+
+[CLICK] Path C is "Full Ownership"—$120K and up. Everything in A and B, plus we source 5-10 deals for you, handle tax and entity setup, run full operations, coordinate cost segregation, and provide ongoing support reviews. This is for maximum tax savings, equity, and cash flow.
+
+[CLICK] Here's how to get started. Go to MANAGEMONEY101.COM. Or email me directly at preston@legacyinvestingshow.com. I'm here to help you figure out which path makes the most sense for your situation.`
                 }
             ];
 
